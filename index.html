@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>blueimp Gallery</title>
+		<meta name="description" content="blueimp Gallery is a touch-enabled, responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers. It features swipe, mouse and keyboard navigation, transition effects, slideshow functionality, fullscreen support and on-demand content loading and can be extended to display additional content types.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/blueimp-gallery.min.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+		<style>
+			.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+				padding: 10px;
+				border: 1px solid #FFA500;
+			}
+			.links{
+				width: 1200px;
+			}
+			.pic-div:hover{
+				border: 1px solid #FFA500;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>Lightbox image gallery</h2>
+		<div id="links" class="links connectedSortable row"></div>
+
+		<div id="sortable2"  class="connectedSortable row" style="margin-top: 100px;width: 800px;height: 600px;background-color: aliceblue;">
+		</div>
+		
+
+		<div id="blueimp-gallery" class="blueimp-gallery">
+			<div class="slides"></div>
+			<h3 class="title"></h3>
+			<a class="prev">‹</a>
+			<a class="next">›</a>
+			<a class="close">×</a>
+			<a class="play-pause"></a>
+			<ol class="indicator"></ol>
+		</div>
+
+		<script src="js/blueimp-gallery.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.blueimp-gallery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script>
+			$(function() {
+				$("#links, #sortable2").sortable({
+					connectWith: ".connectedSortable"
+				}).disableSelection();
+			});
+		</script>
+	</body>
+
+</html>
